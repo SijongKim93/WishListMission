@@ -12,25 +12,38 @@ class WishListViewController: UIViewController {
 
     @IBOutlet weak var wishListTableView: UITableView!
     
+    var wishList: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        wishListTableView.dataSource = self
-//        wishListTableView.delegate = self
-
+        wishListTableView.dataSource = self
+        wishListTableView.delegate = self
+        fetchWishListData()
+    }
+    
+    func fetchWishListData() {
+        wishList = CoreDataManager.shared.getWishListFromCoreData()
+        wishListTableView.reloadData()
     }
     
 }
 
-//extension UIViewController: UITableViewDelegate, UITableViewDataSource {
-//    
-//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//    
-//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//    
-//    
-//}
+extension UIViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wishList.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WishListCell", for: indexPath) as! WishListTableViewCell
+        let product = wishList[indexPath.row]
+        cell.cellPrice.text = "\(product.price)$"
+        cell.cellId.text = "\(product.id)"
+        cell.cellTitle.text = product.title
+        
+        return cell
+        
+    }
+    
+    
+}

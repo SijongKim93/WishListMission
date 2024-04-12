@@ -24,7 +24,8 @@ class WishListTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
-    
 }
+
+//배열에 담아 테이블뷰에 전달
+

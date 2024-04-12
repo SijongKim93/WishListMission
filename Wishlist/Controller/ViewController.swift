@@ -66,16 +66,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func lookWishListTapped(_ sender: UIButton) {
-        guard let secondVC = self.storyboard?.instantiateViewController(identifier: "WishListViewController") as? WishListViewController else { return }
+        guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as? WishListViewController else { return }
         
-        self.present(secondVC, animated: true)
+        present(secondVC, animated: true)
     }
 }
 
 
 extension UIImageView {
     func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
+        DispatchQueue.global(qos: .background).async { [weak self] in
             if let data = try? Data(contentsOf: url),
                let image = UIImage(data: data) {
                 DispatchQueue.main.async {
