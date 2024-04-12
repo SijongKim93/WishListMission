@@ -46,7 +46,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="24P-XO-h87">
-                                <rect key="frame" x="20" y="623.33333333333337" width="353" height="50"/>
+                                <rect key="frame" x="20" y="633" width="353" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLC-IC-CfD">
                                         <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
@@ -74,7 +74,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V08-LR-ESP">
-                                <rect key="frame" x="20" y="688.33333333333337" width="353" height="80"/>
+                                <rect key="frame" x="20" y="698" width="353" height="80"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Osg-X7-QtR"/>
@@ -82,10 +82,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="위시리스트 보기"/>
-                                <connections>
-                                    <action selector="lookWishListTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugP-jL-wsM"/>
-                                    <segue destination="Hdw-qx-VaU" kind="show" id="uR1-d4-Rfb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -94,9 +90,9 @@
                             <constraint firstItem="Ocb-dY-phC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1aO-bZ-wD7"/>
                             <constraint firstItem="Ocb-dY-phC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Cv-lS-hZF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="24P-XO-h87" secondAttribute="trailing" constant="20" id="8Wu-MD-2lr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V08-LR-ESP" secondAttribute="bottom" constant="40" id="9oV-Ka-Fhj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Tj-4b-yTQ" secondAttribute="trailing" constant="20" id="Hb6-0c-2Lv"/>
                             <constraint firstItem="6Tj-4b-yTQ" firstAttribute="top" secondItem="Ocb-dY-phC" secondAttribute="bottom" constant="20" id="R53-XT-PbU"/>
-                            <constraint firstItem="24P-XO-h87" firstAttribute="top" secondItem="6Tj-4b-yTQ" secondAttribute="bottom" constant="40" id="YZW-y1-294"/>
                             <constraint firstItem="6Tj-4b-yTQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aJn-zV-sVM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V08-LR-ESP" secondAttribute="trailing" constant="20" id="bwf-70-Gt4"/>
                             <constraint firstItem="24P-XO-h87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dmi-Gg-4nx"/>
@@ -116,27 +112,17 @@
             </objects>
             <point key="canvasLocation" x="-550" y="18"/>
         </scene>
-        <!--Wish List Table View Controller-->
+        <!--Wish List View Controller-->
         <scene sceneID="NqV-EF-KQN">
             <objects>
-                <viewController storyboardIdentifier="WishListTableViewController" id="Hdw-qx-VaU" customClass="WishListTableViewController" customModule="Wishlist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WishListViewController" id="Hdw-qx-VaU" customClass="WishListViewController" customModule="Wishlist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UNH-Q5-VCP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-y1-MMd">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" id="4pH-ie-Y38" customClass="WishListTableViewCell" customModule="Wishlist" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="44.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4pH-ie-Y38" id="5vl-oJ-FGF">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="22n-za-k0G"/>
@@ -149,6 +135,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6IV-Pr-XBr"/>
+                    <connections>
+                        <outlet property="wishListTableView" destination="fqa-y1-MMd" id="UW4-XP-bFW"/>
+                        <outlet property="wishTableView" destination="fqa-y1-MMd" id="aW7-Sb-OLt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I81-cX-IcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

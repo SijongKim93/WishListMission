@@ -8,9 +8,9 @@
 import UIKit
 
 class NetworkingManager {
-    let productID = Int.random(in: 1 ... 100)
     
     func getMethod(completion: @escaping (Result<RemoteProduct, Error>) -> Void) {
+        let productID = Int.random(in: 1 ... 100)
         // URL구조체 만들기
         guard let url = URL(string: "https://dummyjson.com/products/\(productID)") else {
             print("Error: cannot create URL")
@@ -50,6 +50,7 @@ class NetworkingManager {
                 print("Error decoding product data:", error)
                 completion(.failure(NetworkingError.decodingError))
             }
+            
         }.resume()
     }
 }

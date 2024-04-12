@@ -8,21 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		4D4DA4722BC6B08900E94C2D /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DA4712BC6B08900E94C2D /* NetworkingManager.swift */; };
+		4D4DA4A72BC8C35900E94C2D /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DA4A52BC8C35900E94C2D /* WishListTableViewCell.swift */; };
+		4D4DA4A82BC8C35900E94C2D /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4DA4A62BC8C35900E94C2D /* WishListTableViewCell.xib */; };
+		4D4DA4AB2BC8C41300E94C2D /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DA4A92BC8C41300E94C2D /* Product+CoreDataClass.swift */; };
+		4D4DA4AC2BC8C41300E94C2D /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DA4AA2BC8C41300E94C2D /* Product+CoreDataProperties.swift */; };
+		4D4DA4AE2BC8C7C700E94C2D /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DA4AD2BC8C7C700E94C2D /* WishListViewController.swift */; };
+		4D4DA5022BC928CD00E94C2D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4DA5012BC928CD00E94C2D /* CoreDataManager.swift */; };
 		4DAD3C9A2BC534F1000AFFC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3C992BC534F1000AFFC5 /* AppDelegate.swift */; };
 		4DAD3C9C2BC534F1000AFFC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3C9B2BC534F1000AFFC5 /* SceneDelegate.swift */; };
 		4DAD3CA12BC534F1000AFFC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4DAD3CA02BC534F1000AFFC5 /* Base */; };
 		4DAD3CA32BC534F3000AFFC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAD3CA22BC534F3000AFFC5 /* Assets.xcassets */; };
 		4DAD3CA62BC534F3000AFFC5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4DAD3CA52BC534F3000AFFC5 /* Base */; };
 		4DAD3CB22BC53CB0000AFFC5 /* RemoteProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3CB12BC53CB0000AFFC5 /* RemoteProduct.swift */; };
-		4DAD3CB52BC54153000AFFC5 /* WishListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3CB32BC54153000AFFC5 /* WishListTableViewController.swift */; };
-		4DAD3CB92BC54257000AFFC5 /* WishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3CB72BC54257000AFFC5 /* WishListTableViewCell.swift */; };
-		4DAD3CBA2BC54257000AFFC5 /* WishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAD3CB82BC54257000AFFC5 /* WishListTableViewCell.xib */; };
 		4DAD3CBC2BC54685000AFFC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3CBB2BC54685000AFFC5 /* ViewController.swift */; };
-		4DAD3CBF2BC570C1000AFFC5 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3CBD2BC570C1000AFFC5 /* DataModel.xcdatamodeld */; };
+		4DAD3CBF2BC570C1000AFFC5 /* WishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD3CBD2BC570C1000AFFC5 /* WishList.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D4DA4712BC6B08900E94C2D /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		4D4DA4A52BC8C35900E94C2D /* WishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
+		4D4DA4A62BC8C35900E94C2D /* WishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
+		4D4DA4A92BC8C41300E94C2D /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4D4DA4AA2BC8C41300E94C2D /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4D4DA4AD2BC8C7C700E94C2D /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		4D4DA5012BC928CD00E94C2D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		4DAD3C962BC534F1000AFFC5 /* Wishlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wishlist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAD3C992BC534F1000AFFC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DAD3C9B2BC534F1000AFFC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +40,6 @@
 		4DAD3CA52BC534F3000AFFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DAD3CA72BC534F3000AFFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DAD3CB12BC53CB0000AFFC5 /* RemoteProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProduct.swift; sourceTree = "<group>"; };
-		4DAD3CB32BC54153000AFFC5 /* WishListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewController.swift; sourceTree = "<group>"; };
-		4DAD3CB72BC54257000AFFC5 /* WishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListTableViewCell.swift; sourceTree = "<group>"; };
-		4DAD3CB82BC54257000AFFC5 /* WishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListTableViewCell.xib; sourceTree = "<group>"; };
 		4DAD3CBB2BC54685000AFFC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DAD3CBE2BC570C1000AFFC5 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				4DAD3CBB2BC54685000AFFC5 /* ViewController.swift */,
-				4DAD3CB32BC54153000AFFC5 /* WishListTableViewController.swift */,
-				4DAD3CBD2BC570C1000AFFC5 /* DataModel.xcdatamodeld */,
+				4D4DA4AD2BC8C7C700E94C2D /* WishListViewController.swift */,
+				4DAD3CBD2BC570C1000AFFC5 /* WishList.xcdatamodeld */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				4DAD3C9F2BC534F1000AFFC5 /* Main.storyboard */,
-				4DAD3CB72BC54257000AFFC5 /* WishListTableViewCell.swift */,
-				4DAD3CB82BC54257000AFFC5 /* WishListTableViewCell.xib */,
+				4D4DA4A52BC8C35900E94C2D /* WishListTableViewCell.swift */,
+				4D4DA4A62BC8C35900E94C2D /* WishListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,7 +118,10 @@
 		4DAD3CB02BC539A5000AFFC5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4D4DA4A92BC8C41300E94C2D /* Product+CoreDataClass.swift */,
+				4D4DA4AA2BC8C41300E94C2D /* Product+CoreDataProperties.swift */,
 				4DAD3CB12BC53CB0000AFFC5 /* RemoteProduct.swift */,
+				4D4DA5012BC928CD00E94C2D /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,7 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DAD3CBA2BC54257000AFFC5 /* WishListTableViewCell.xib in Resources */,
+				4D4DA4A82BC8C35900E94C2D /* WishListTableViewCell.xib in Resources */,
 				4DAD3CA32BC534F3000AFFC5 /* Assets.xcassets in Resources */,
 				4DAD3CA62BC534F3000AFFC5 /* Base in Resources */,
 				4DAD3CA12BC534F1000AFFC5 /* Base in Resources */,
@@ -189,14 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4DA5022BC928CD00E94C2D /* CoreDataManager.swift in Sources */,
+				4D4DA4A72BC8C35900E94C2D /* WishListTableViewCell.swift in Sources */,
+				4D4DA4AE2BC8C7C700E94C2D /* WishListViewController.swift in Sources */,
 				4DAD3CBC2BC54685000AFFC5 /* ViewController.swift in Sources */,
 				4DAD3C9A2BC534F1000AFFC5 /* AppDelegate.swift in Sources */,
-				4DAD3CB92BC54257000AFFC5 /* WishListTableViewCell.swift in Sources */,
-				4DAD3CBF2BC570C1000AFFC5 /* DataModel.xcdatamodeld in Sources */,
+				4DAD3CBF2BC570C1000AFFC5 /* WishList.xcdatamodeld in Sources */,
 				4DAD3C9C2BC534F1000AFFC5 /* SceneDelegate.swift in Sources */,
 				4D4DA4722BC6B08900E94C2D /* NetworkingManager.swift in Sources */,
 				4DAD3CB22BC53CB0000AFFC5 /* RemoteProduct.swift in Sources */,
-				4DAD3CB52BC54153000AFFC5 /* WishListTableViewController.swift in Sources */,
+				4D4DA4AB2BC8C41300E94C2D /* Product+CoreDataClass.swift in Sources */,
+				4D4DA4AC2BC8C41300E94C2D /* Product+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,14 +431,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4DAD3CBD2BC570C1000AFFC5 /* DataModel.xcdatamodeld */ = {
+		4DAD3CBD2BC570C1000AFFC5 /* WishList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				4DAD3CBE2BC570C1000AFFC5 /* DataModel.xcdatamodel */,
 			);
 			currentVersion = 4DAD3CBE2BC570C1000AFFC5 /* DataModel.xcdatamodel */;
-			name = DataModel.xcdatamodeld;
-			path = /Users/kimsijong/Desktop/mainProject/Wishlist/Wishlist/Controller/DataModel.xcdatamodeld;
+			path = WishList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

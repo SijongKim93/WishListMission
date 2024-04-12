@@ -11,8 +11,9 @@ import CoreData
 
 class ViewController: UIViewController {
 
-    var container: NSPersistentContainer!
+    var currentProduct: RemoteProduct?
     let networkingManager = NetworkingManager()
+    let wishListManager = CoreDataManager.shared
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let product):
+                    self.currentProduct = product
                     self.updateUI(with: product)
                 case .failure(let error):
                     print("상품 불러오기가 실패했습니다:", error)
@@ -38,29 +40,36 @@ class ViewController: UIViewController {
     }
     
     func updateUI(with product: RemoteProduct) {
-        imageView.load(url: product.thumbnail)
-        titleLabel.text = product.title
-        descriptionLabel.text = product.description
-        priceLabel.text = "\(product.price)"
+        DispatchQueue.main.async {
+            self.imageView.load(url: product.thumbnail)
+            self.titleLabel.text = product.title
+            self.descriptionLabel.text = product.description
+            self.priceLabel.text = "\(product.price)$"
+        }
     }
-
-
-
     
-
     
     @IBAction func saveProductButtonTapped(_ sender: UIButton) {
+        guard let product = currentProduct else {
+            print("제품 정보가 없습니다.")
+            return
+        }
+        
+        wishListManager.saveWishListData(product) {
+            print("제품이 저장되었습니다.")
+        }
     }
     
+    
     @IBAction func nextProductButtonTapped(_ sender: UIButton) {
+        self.fetchData()
     }
     
     @IBAction func lookWishListTapped(_ sender: UIButton) {
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "WishListTableViewController") as? WishListTableViewController else { return }
+        guard let secondVC = self.storyboard?.instantiateViewController(identifier: "WishListViewController") as? WishListViewController else { return }
         
-        self.present(nextVC, animated: true)
+        self.present(secondVC, animated: true)
     }
-    
 }
 
 
