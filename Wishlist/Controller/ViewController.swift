@@ -67,13 +67,6 @@ class ViewController: UIViewController {
         self.fetchData()
     }
     
-    // MARK: - 위시리스트 이동
-    @IBAction func lookWishListTapped(_ sender: UIButton) {
-        guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as? WishListViewController else { return }
-        
-        present(secondVC, animated: true)
-        
-    }
 }
 
 

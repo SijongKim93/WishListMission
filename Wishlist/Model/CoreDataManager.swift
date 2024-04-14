@@ -28,7 +28,7 @@ class CoreDataManager {
         
         if let context = context {
             let request = NSFetchRequest<NSManagedObject>(entityName: self.coreDataName)
-            let idOrder = NSSortDescriptor(key: "id", ascending: false)
+            let idOrder = NSSortDescriptor(key: "id", ascending: true)
             request.sortDescriptors = [idOrder]
             
             do {
@@ -67,7 +67,7 @@ class CoreDataManager {
         }
     }
     
-    // MARK: - 코어데이터 삭제 함수 구현
+    // MARK: - 코어데이터 삭제하기
     func deleteProduct(_ product: Product, completion: @escaping () -> Void) {
         guard let context = context else {
             print("content를 가져올 수 없습니다.")

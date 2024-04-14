@@ -13,10 +13,12 @@ class WishListViewController: UIViewController {
     @IBOutlet weak var wishListTableView: UITableView!
     
     var wishList: [Product] = []
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupRefreshControl()
     }
     
     func setupTableView() {
@@ -24,8 +26,20 @@ class WishListViewController: UIViewController {
         wishListTableView.delegate = self
         wishListTableView.register(UINib(nibName: "WishListTableViewCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
         
-        
         fetchWishListData()
+    }
+    
+    // MARK: - refreshcontrol 구현
+    func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        wishListTableView.refreshControl = refreshControl
+        fetchWishListData()
+    }
+    
+    @objc func refreshData(_ sender: Any) {
+        fetchWishListData()
+        wishListTableView.refreshControl?.endRefreshing()
     }
     
     // MARK: - 코어데이터 가져와 저장하는 함수
@@ -55,6 +69,7 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    // MARK: - 셀 삭제 기능
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let productToDelete = wishList[indexPath.row]
@@ -65,4 +80,22 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    // MARK: - refreshcontrol 세팅
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        wishListTableView.refreshControl?.beginRefreshing()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            wishListTableView.refreshControl?.endRefreshing()
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        wishListTableView.refreshControl?.endRefreshing()
+    }
 }
+
+
+
