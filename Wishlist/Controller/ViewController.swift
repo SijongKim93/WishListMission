@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         fetchData()
     }
     
+    // MARK: - 네트워킹된 데이터 가져오기
     func fetchData() {
         networkingManager.getMethod { result in
             DispatchQueue.main.async {
@@ -39,6 +40,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - 네트워킹 데이터 컴포넌트와 연결
     func updateUI(with product: RemoteProduct) {
         DispatchQueue.main.async {
             self.imageView.load(url: product.thumbnail)
@@ -48,7 +50,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // MARK: - 코어데이터 저장함수 불러와 실행
     @IBAction func saveProductButtonTapped(_ sender: UIButton) {
         guard let product = currentProduct else {
             print("제품 정보가 없습니다.")
@@ -60,15 +62,17 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    // MARK: - 상품 랜덤 변경
     @IBAction func nextProductButtonTapped(_ sender: UIButton) {
         self.fetchData()
     }
     
+    // MARK: - 위시리스트 이동
     @IBAction func lookWishListTapped(_ sender: UIButton) {
         guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondVC") as? WishListViewController else { return }
         
         present(secondVC, animated: true)
+        
     }
 }
 

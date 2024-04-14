@@ -104,6 +104,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ocb-dY-phC" secondAttribute="trailing" id="zHE-wc-IWc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="glr-Bu-SYy"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="c9W-ec-SfQ" id="6ol-RT-hAN"/>
                         <outlet property="imageView" destination="Ocb-dY-phC" id="75t-71-930"/>
@@ -113,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="18"/>
+            <point key="canvasLocation" x="376.3358778625954" y="17.605633802816904"/>
         </scene>
         <!--Wish List View Controller-->
         <scene sceneID="NqV-EF-KQN">
@@ -144,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I81-cX-IcY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="18"/>
+            <point key="canvasLocation" x="1234.3511450381679" y="17.605633802816904"/>
         </scene>
     </scenes>
     <resources>
@@ -152,10 +153,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

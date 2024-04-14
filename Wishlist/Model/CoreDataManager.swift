@@ -12,6 +12,7 @@ import CoreData
 
 class CoreDataManager {
     
+    // MARK: - 코어데이터 매니저 싱글톤 만들기
     static let shared = CoreDataManager()
     private init() {}
     
@@ -20,6 +21,7 @@ class CoreDataManager {
     
     let coreDataName: String = "Product"
     
+    // MARK: - 코어데이터 가져오기
     
     func getWishListFromCoreData() -> [Product] {
         var wishList: [Product] = []
@@ -41,6 +43,7 @@ class CoreDataManager {
         return wishList
     }
     
+    // MARK: - 코어데이터 저장하기
     func saveWishListData(_ product: RemoteProduct, completion: @escaping () -> Void) {
         guard let context = context else {
             print("context를 가져올 수 없습니다.")
@@ -64,5 +67,31 @@ class CoreDataManager {
         }
     }
     
-    
+    // MARK: - 코어데이터 삭제 함수 구현
+    func deleteProduct(_ product: Product, completion: @escaping () -> Void) {
+        guard let context = context else {
+            print("content를 가져올 수 없습니다.")
+            return
+        }
+        
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: coreDataName)
+        if let title = product.title {
+            fetchRequest.predicate = NSPredicate(format: "title == %@", title)
+        }
+        
+        do {
+            if let result = try context.fetch(fetchRequest) as? [NSManagedObject] {
+                for object in result {
+                    context.delete(object)
+                }
+                
+                try context.save()
+                print("삭제가 완료되었습니다.")
+                completion()
+            }
+        } catch {
+            print("삭제가 실패했습니다.", error)
+            completion()
+        }
+    }
 }
