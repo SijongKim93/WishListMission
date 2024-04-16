@@ -25,7 +25,6 @@ class WishListViewController: UIViewController {
         wishListTableView.dataSource = self
         wishListTableView.delegate = self
         wishListTableView.register(UINib(nibName: "WishListTableViewCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
-        
         fetchWishListData()
     }
     
